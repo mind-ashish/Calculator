@@ -31,7 +31,7 @@ output.innerText=print;
 });
 
 negation.addEventListener('click',function(){
-if (str!="" || str!="0"){
+if (str!="" && str!="0"){
     str="-"+str;
 }
 });
@@ -65,7 +65,32 @@ str=str+".";
 
 for (var i=0;i<numbers.length; i++){
     numbers[i].addEventListener('click',function(){
+        var digit=this.innerText;
+        str=str+digit;
+        flag=0;
+        for(var j=0;j<operators.length;j++){
+            if(print==operators[j].innerText){
+                flag=1;
+            }
+        }
+        if(flag==1){
+            print=digit;
+            flag=0;
+        }else{
+            print=print+digit;
+        }
+        output.innerText=print;
+    });
+}
 
+for (var i=0;i<operators.length;i++){
+    operators[i].addEventListener('click',function(){
+        var operatorType=this.innerText;
+        if(str!=""){
+            str=str+operatorType;
+            print=operatorType;
+            output.innerText=print;
+        }
     });
 }
 
