@@ -61,6 +61,8 @@ if(str==""){
     str="0";
 }
 str=str+".";
+print=print+".";
+output.innerText=print;
 });
 
 for (var i=0;i<numbers.length; i++){
