@@ -30,5 +30,44 @@ print="";
 output.innerText=print;
 });
 
+negation.addEventListener('click',function(){
+if (str!="" || str!="0"){
+    str="-"+str;
+}
+});
+
+percent.addEventListener('click',function(){
+if (str!=""){
+    var val=eval(str);
+    val=val/100;
+    str=val;
+    print=str;
+    output.innerText=print;
+}
+});
+
+equal.addEventListener('click',function(){
+if(str!=""){
+    var ans=eval(str);
+    str=ans;
+    print=ans;
+    output.innerText=print;
+
+}
+});
+
+decimal.addEventListener('click',function(){
+if(str==""){
+    str="0";
+}
+str=str+".";
+});
+
+for (var i=0;i<numbers.length; i++){
+    numbers[i].addEventListener('click',function(){
+
+    });
+}
+
 
 
