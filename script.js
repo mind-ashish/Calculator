@@ -33,6 +33,9 @@ output.innerText=print;
 negation.addEventListener('click',function(){
 if (str!="" && str!="0"){
     str="-"+str;
+    print=str;
+    output.innerText=print;
+
 }
 });
 
